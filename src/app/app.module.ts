@@ -49,7 +49,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AppRoutingModule,
     BoostrapModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDc_PsV4e99mtgskG8Da3dSW3P_faz7pu8'
+      apiKey: environment.mapKey
     }),
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
