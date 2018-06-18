@@ -1,0 +1,56 @@
+@import '../../gb-mixins';
+.box-profile {
+  padding: 20px;
+  .image-avatar {
+    width: 90px;
+    height: 90px;
+  }
+  .box-profile-info {
+    color: $main_text;
+    .profile-name {
+      text-transform: uppercase;
+      font-family: 'Avenirblack';
+      font-size: 110%;
+    }
+    .agent {
+      font-family: 'Avenirbook';
+      border: 1px $colorAccent solid;
+      color: $colorAccent;
+      text-transform: uppercase;
+      font-size: 70%;
+      padding: 4px;
+      margin-left: 5px;
+      margin-top: -5px;
+    }
+    .icon {
+      width: 15px;
+      height: auto;
+      margin-right: 5px;
+    }
+  }
+}
+.button-send {
+  background-color: #f9307a;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Avenirheavy';
+}
+.contact-agent {
+  font-family: 'Avenirblack';
+  text-transform: uppercase;
+  font-size: 90%;
+}
+.form-block {
+  // input::-webkit-input-placeholder,
+  // textarea::-webkit-input-placeholder {
+  //   color: red;
+  // }
+  // input:-moz-placeholder,
+  // textarea:-moz-placeholder {
+  //   color: #636363;
+  // }
+  input,
+  textarea {
+    padding: 10px;
+  }
+}

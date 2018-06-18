@@ -1,0 +1,68 @@
+@import '../../gb-mixins';
+
+.box-price {
+  position: relative;
+  margin-top: -50px;
+  color: white;
+  margin-left: 20px;
+  .price {
+    font-family: 'Avenirnextmedium';
+    font-size: 180%;
+  }
+}
+.box-info {
+  position: relative;
+  border: 1px #efeefe solid;
+  color: black;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  background-color: #efeefe;
+  .box-info-address {
+    text-align: center;
+    color: $color_5c5c5c;
+    .icon-map {
+      margin-right: 5px;
+      width: 10px;
+    }
+  }
+  .box-info-feature {
+    display: block;
+    img {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 5px;
+    }
+    .item {
+      position: relative;
+      display: flex;
+      font-size: 70%;
+      font-family: 'Avenirnextmedium';
+      flex-direction: column;
+      padding: 15px;
+      align-items: center;
+      color: $color_5c5c5c_70percdnt;
+    }
+    .item:nth-child(1):after,
+    .item:nth-child(2):after,
+    .item:nth-child(3):after {
+      content: '';
+      height: 30%;
+      width: 1px;
+      position: absolute;
+      right: 0;
+      top: 30%;
+      background-color: gray;
+    }
+  }
+}
+.content-wrapper {
+  .box-description {
+    color: $main_text;
+    font-size: 14px;
+    padding: 20px;
+    .description {
+      text-transform: uppercase;
+    }
+  }
+}

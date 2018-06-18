@@ -1,0 +1,55 @@
+<div *ngIf="!hideForNoData" class="d-md-none container-app">
+  <div class="container-header fixed-top">
+    <div [ngClass]="{'active': activeTab === 0}" (click)="activeTab = 0; setIndexTab(0)">
+      <h3>
+        {{homeData.title}} {{card_id}}
+      </h3>
+    </div>
+    <div class="row tab-menu">
+      <div class="col-3" [ngClass]="{'activeTab': activeTab === 1}" (click)="activeTab = 1; setIndexTab(1)">
+        <span>Photos</span>
+      </div>
+      <div class="col-3" [ngClass]="{'activeTab': activeTab === 2}" (click)="activeTab = 2; setIndexTab(2)">
+        <span>Features</span>
+      </div>
+      <div class="col-3" [ngClass]="{'activeTab': activeTab === 3}" (click)="activeTab = 3; setIndexTab(3)">
+        <span>Map</span>
+      </div>
+      <div class="col-3" [ngClass]="{'activeTab': activeTab === 4}" (click)="activeTab = 4; setIndexTab(4)">
+        <span>Contact</span>
+      </div>
+    </div>
+  </div>
+  <div class="content-body">
+    <div class="swiper-container main-swiper-container" [ngClass]="{'swiper-container-input': setNewHeight}" [swiper]="config" (indexChange)="changeIndexTab($event)">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <app-home-card [card]="homeData"></app-home-card>
+        </div>
+        <div class="swiper-slide">
+          <app-home-photo [photoData]="photoData" (callShowGalerry)="callShowGalerry($event)"></app-home-photo>
+        </div>
+        <div class="swiper-slide">
+          <app-home-features [featureData]="featureData"></app-home-features>
+        </div>
+        <div class="swiper-slide">
+          <app-home-map [mapData]="mapData"></app-home-map>
+        </div>
+        <div class="swiper-slide">
+          <app-home-contact [contactData]="contactData" (focusedInput)="focusedInput()" (focusedInputOut)="focusedInputOut()"></app-home-contact>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!setNewHeight" class="fixed-bottom">
+      <div class="container-footer">
+        <span class="text" (click)="activeTab = 4; setIndexTab(4)">
+          <img src="assets/images/ic_calendar.png">Schedule tour</span>
+        <button class="btn button-navigation rounded-circle" (click)="navigatonSection()">
+          <i class="fa fa-angle-down"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <app-home-photo-gallery [images]="photoData.cardImages" [indexImage]="imageGalleryIndex" *ngIf="isShowGallery" (callCloseGallery)="callCloseGallery($event)"></app-home-photo-gallery>
+</div>

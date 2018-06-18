@@ -1,0 +1,35 @@
+@import '../../gb-mixins';
+.box-attribute {
+  margin-bottom: 5px;
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 80%;
+    .box-attribute-info {
+      margin-left: 7px;
+      color: $main_transparent_50;
+      font-family: 'Avenirmedium';
+      font-size: 90%;
+      .box-attribute-info-value {
+        color: $main_text;
+        font-size: 110%;
+      }
+    }
+  }
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.row-feature {
+  margin-bottom: 5px;
+  color: $main_text;
+  .row-feature-title {
+    font-family: 'Avenirheavy';
+  }
+  .row-feature-text {
+    font-family: 'Avenirbook';
+  }
+}

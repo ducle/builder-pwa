@@ -1,0 +1,16 @@
+{
+  "short_name": "Build Stacks",
+  "name": "Build Stacks",
+  "start_url": ".",
+  "theme_color": "#262C46",
+  "background_color": "#262C46",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/assets/icons/stack-logo-512x.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

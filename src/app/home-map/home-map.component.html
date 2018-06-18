@@ -1,0 +1,54 @@
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+<div class="container">
+  <div class="box-info">
+    <div class="box-info-address">
+      <span>
+        <img class="icon-map" src="assets/images/ic_new_location.png" />{{mapData.Address}}</span>
+    </div>
+    <div class="box-info-direction">
+      Get Direction
+    </div>
+
+  </div>
+  <div class="row box-attraction">
+    <div class="col-4 item p-0">
+      <img src="assets/images/ic_map_attraction_one.png" />
+      <p>Beverly hills</p>
+    </div>
+    <div class="col-4 item p-0">
+      <img src="assets/images/ic_map_attraction_two.png" />
+      <p>Wilshire & robertson</p>
+    </div>
+    <div class="col-4 item p-0">
+      <img src="assets/images/ic_map_attraction_three.png" />
+      <p>Sunshine springs</p>
+    </div>
+  </div>
+  <div class="row box-near-by">
+    <div class="col-6">
+      <span class="box-near-by-header">Nearby Schools</span>
+      <br /> {{mapData.ElementarySchool}}
+      <br /> {{mapData.MiddleSchool}}
+      <br /> {{mapData.HighSchool}}
+      <br />
+    </div>
+    <div class="col-3 text-center">
+      <span class="box-near-by-header">Grades</span>
+      <br /> {{mapData.ElementarySchoolDistanceGrade}}
+      <br /> {{mapData.MiddleSchoolDistanceGrade}}
+      <br /> {{mapData.HighSchoolDistanceGrade}}
+    </div>
+    <div class="col-3">
+      <span class="box-near-by-header">Distance</span>
+      <br /> {{mapData.ElementarySchoolDistance}} miles
+      <br /> {{mapData.MiddleSchoolDistance}} miles
+      <br /> {{mapData.HighSchoolDistance}} miles
+      <br />
+    </div>
+  </div>
+</div>
+<div class="schedule-footer">
+  <h3>open house {{mapData.timing | formatTime}}</h3>
+</div>

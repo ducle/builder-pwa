@@ -1,0 +1,41 @@
+<img src="{{card.cardImages && card.cardImages[0] || '' | removesrc}}" alt="First slide" style="display: block; width: 100%; height: 200px;">
+<div class="content-wrapper">
+  <div class="box-price">
+    <span class="price">${{card.Price}}</span>
+  </div>
+  <div class="box-info">
+    <div class="box-info-address">
+      <span>
+        <img class="icon-map" src="assets/images/ic_new_location.png" />{{card.Address}}</span>
+    </div>
+    <div class="box-info-feature">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 item p-2">
+            <img src="assets/images/ic_house.png" /> SINGLE FAM.
+          </div>
+          <div class="col-3 item p-2">
+            <img src="assets/images/ic_bed.png" /> {{card.BD}} BED
+          </div>
+          <div class="col-3 item p-2">
+            <img src="assets/images/ic_bath.png" />
+            <span>{{card.BA}} BATH</span>
+          </div>
+          <div class="col-3 item p-2">
+            <img src="assets/images/ic_features_square.png" />
+            <span> {{card.SF}} SQ/FT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box-description">
+    <span class="description">Description</span>
+    <p>
+      {{card.description}}
+    </p>
+  </div>
+</div>
+<div class="schedule-footer">
+  <h3>open house {{card.timing | formatTime}}</h3>
+</div>

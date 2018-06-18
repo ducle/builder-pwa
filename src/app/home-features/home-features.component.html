@@ -1,0 +1,90 @@
+<div class="container">
+  <app-header-general-info [data]="featureData"></app-header-general-info>
+  <div class="row box-attribute">
+    <div class="col-4 item">
+      <img src="assets/images/ic_features_year.png" />
+      <div class="box-attribute-info">
+        <span>
+          year built
+        </span>
+        <br/>
+        <span class="box-attribute-info-value">{{featureData.yearBuild}}</span>
+      </div>
+
+    </div>
+    <div class="col-4 item">
+      <img src="assets/images/ic_features_lot.png" />
+      <div class="box-attribute-info">
+        <span>lot</span>
+        <br/>
+        <span class="box-attribute-info-value">{{featureData.LotSize}}SQFT</span>
+      </div>
+    </div>
+    <div class="col-4 item">
+      <img src="assets/images/ic_features_square.png" />
+      <div class="box-attribute-info">
+        <span>price/sqft</span>
+        <br/>
+        <span class="box-attribute-info-value">${{featureData.PriceperSquareFoot}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="row row-feature">
+    <div class="col-6">
+      <span class="row-feature-title">Flooring:</span>
+      <br/>
+      <span class="row-feature-text">{{featureData.Flooring}}</span>
+    </div>
+    <div class="col-6">
+      <strong>Construction:</strong>
+      <br/>
+      <span>{{featureData.Construction}}</span>
+    </div>
+  </div>
+  <div class="row row-feature">
+    <div class="col-6">
+      <span class="row-feature-title">Heating:</span>
+      <br/>
+      <span class="row-feature-text">{{featureData.Heating}}</span>
+    </div>
+    <div class="col-6">
+      <span class="row-feature-title">Cooling:</span>
+      <br/>
+      <span class="row-feature-text">{{featureData.Cooling}}</span>
+    </div>
+  </div>
+  <div class="row row-feature">
+    <div class="col-6">
+      <span class="row-feature-title">Appliiances:</span>
+      <br/>
+      <span class="row-feature-text">{{featureData.Appliances}}</span>
+    </div>
+    <div class="col-6">
+      <span class="row-feature-title">Exterior:</span>
+      <br/>
+      <span class="row-feature-text">{{featureData.Exterior}}</span>
+
+    </div>
+  </div>
+  <div class="row row-feature">
+    <div class="col-6">
+      <span class="row-feature-title">Parking:</span>
+      <br/>
+      <span class="row-feature-text">{{featureData.Parking}}</span>
+    </div>
+    <div class="col-6">
+      <span class="row-feature-title">Roof:</span>
+      <br/>
+      <span class="row-feature-text">{{featureData.Roof}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      Other:
+      <p>{{featureData.other1}}, {{featureData.other2}}</p>
+    </div>
+  </div>
+</div>
+<div class="schedule-footer">
+  <h3>open house {{featureData.timing | formatTime}}</h3>
+</div>

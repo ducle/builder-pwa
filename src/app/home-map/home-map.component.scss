@@ -1,0 +1,52 @@
+@import '../../gb-mixins';
+agm-map {
+  height: 200px;
+}
+.box-info {
+  position: relative;
+  border: 1px #efeefe solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #efeefe;
+  margin-top: -30px;
+  .box-info-address {
+    text-align: center;
+    color: $color_5c5c5c;
+    .icon-map {
+      width: 10px;
+      margin-right: 5px;
+    }
+  }
+  .box-info-direction {
+    display: flex;
+    justify-content: center;
+    font-size: 110%;
+    color: $colorAccent;
+  }
+}
+.box-attraction {
+  margin-top: 20px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  .item {
+    text-transform: uppercase;
+    font-size: 80%;
+    text-align: center;
+    font-family: 'Avenirmedium';
+    p {
+      margin-top: 7px;
+      color: $main_transparent;
+    }
+  }
+}
+.box-near-by {
+  color: $main-text;
+  line-height: 200%;
+  .box-near-by-header {
+    font-family: 'Avenirheavy';
+    text-transform: uppercase;
+  }
+}
